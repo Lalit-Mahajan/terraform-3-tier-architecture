@@ -138,7 +138,7 @@ resource "aws_instance" "webserver1" {
   ami                    = "ami-0d5eff06f840b45e9"
   instance_type          = "t2.micro"
   availability_zone      = "us-east-1a"
-  key_name               = "rahull"
+  key_name               = "lalitmahajan"
   vpc_security_group_ids = [aws_security_group.webserver-sg.id]
   subnet_id              = aws_subnet.web-subnet-1.id
   user_data              = "${file("apache.sh")}"
@@ -198,6 +198,7 @@ resource "aws_db_instance" "default" {
   password             = "Raham#123568i"
   skip_final_snapshot  = true
 }
+
 
 resource "aws_db_subnet_group" "default" {
   name       = "main"
@@ -358,10 +359,10 @@ output "lb_dns_name" {
 
 
 resource "aws_s3_bucket" "example" {
-  bucket = "rahamtestbycketterra7788abcdefxxc54hj6jfegfefgrg"
+  bucket = "lalitmahajanbydevops"
 
   tags = {
-    Name        = "rahamtestbycketterra7788abcdefxxc"
+    Name        = "lalitmahajanbydevops"
     Environment = "Dev"
   }
 }
@@ -378,5 +379,5 @@ default = ["userone", "usertwo", "userthree", "userfour"]
 }
 
 resource "aws_iam_group" "two" {
-name = "devopswithawsbyrahamshaik"
+name = "devopswithawsbylalit"
 }
